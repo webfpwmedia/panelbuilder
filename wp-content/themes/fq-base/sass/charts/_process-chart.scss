@@ -1,0 +1,124 @@
+.process-chart-wrapper {
+
+	.process-chart {
+
+		max-width: 2000px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-rows: repeat(6, auto 2rem) auto;
+
+		@include media('>tablet') {
+			grid-template-rows: auto;
+			grid-template-columns: auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto;
+		}
+
+		.line {
+			width: 1px;
+			background-color: $black;
+			place-self: stretch center;
+
+			@include media('>tablet') {
+				width: auto;
+				height: 1px;
+				place-self: center stretch;
+				background-color: $black;
+			}
+		}
+
+		.step {
+			padding: $small-spacing;
+			background-color: $primary;
+			box-shadow: $base-box-shadow;
+			place-self: center stretch;
+
+			@include media('>tablet') {
+				place-self: center stretch;
+			}
+
+			.step-label {
+				@include base-display-type(1.1rem);
+				margin: 0;
+
+				@include media('>tablet') {
+					font-size: 1rem;
+				}
+				@include media('>smallmonitor') {
+					font-size: 1.1rem;
+				}
+				@include media('>monitor') {
+					font-size: 1.2rem;
+				}
+			}
+
+			&.step-1 {
+				// background-color: #F1D092;
+				background-color: #D68619;
+				color: $white;
+			}
+
+			&.step-2 {
+				background-color: #D68619;
+				color: $white;
+			}
+
+			&.step-3 {
+				// background-color: #D3641B;
+				background-color: #D68619;
+				color: $white;
+			}
+
+			&.step-4 {
+				// background-color: #D3641B;
+				background-color: #D68619;
+				color: $white;
+			}
+
+			&.step-5 {
+				padding: 1rem 0;
+				background-color: transparent;
+				box-shadow: none;
+				display: grid;
+				border: 1px solid $black;
+
+				@include media('<=tablet') {
+					grid-template-columns: 55% 55%;
+					width: 60%;
+					margin-left: auto;
+					margin-right: auto;
+					justify-content: space-between;
+				}
+				@include media('>tablet') {
+					padding: 0 1rem;
+				}
+
+				.step-5-1 {
+					background-color: $black;
+					color: $white;
+
+					@include media('<=tablet') {
+						transform: translateX(-50%);
+					}
+					@include media('>tablet') {
+						transform: translateY(-50%);
+					}
+				}
+
+				.step-5-2 {
+					background-color: #F1D092;
+
+					@include media('<=tablet') {
+						transform: translateX(30%);
+					}
+					@include media('>tablet') {
+						transform: translateY(50%);
+					}
+				}
+			}
+
+			&.step-6 {
+				background-color: #035796;
+				color: $white;
+			}
+		}
+	}
+}

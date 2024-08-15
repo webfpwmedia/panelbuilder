@@ -1,0 +1,39 @@
+.has-announcement { // this is the body class if this is showing
+
+	.page-header-announcement {
+		position: fixed;
+		right: 0;
+		left: 0;
+		z-index: 400;
+		height: $_announcement_depth;
+		background-color: $primary;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.banner-message {
+			@include contain-it($xwide);
+
+			p {
+				margin: 0;
+				text-align: center;
+				font-size: $small-font-size;
+				font-weight: $demi;
+				line-height: 1.2;
+				color: $gray5;
+				@include media('>tablet') {
+					font-size: $base-font-size;
+				}
+			}
+
+			a {
+				color: $gray5;
+				text-decoration: underline;
+				padding-left: $small-spacing/2;
+				&:hover {
+					color: $gray3;
+				}
+			}
+		}
+	}
+}

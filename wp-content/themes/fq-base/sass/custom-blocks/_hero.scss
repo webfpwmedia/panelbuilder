@@ -1,0 +1,131 @@
+@import '../../lib/css/media-queries/include-media';
+
+.wp-block-figoli-quinn-hero {
+    @include media('>bigmonitor') {
+        min-height: 725px;
+    }
+}
+
+.hero {
+    height: 100%;
+    width: auto;
+    position: relative;
+
+    .media-element {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-size: cover;
+    }
+
+    &.bg-center {
+        .image {
+            background-position: center;
+        }
+    }
+    &.bg-top {
+        .image {
+            background-position: top;
+        }
+    }
+    &.bg-bottom {
+        .image {
+            background-position: bottom;
+        }
+    }
+    &.bg-left {
+        .image {
+            background-position: left;
+        }
+    }
+    &.bg-right {
+        .image {
+            background-position: right;
+        }
+    }
+
+    .components-resizable-box__container,
+    .image {
+        height: 100% !important;
+    }
+
+    .components-resizable-box__container.editor-media-container__resizer {
+        > div {
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            position: absolute;
+        }
+    }
+
+    .block-editor-media-placeholder {
+        .components-placeholder__fieldset {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .wp-block-button {
+        padding: 0;
+    }
+
+    .block-editor-inner-blocks {
+        .wp-block {
+            margin-bottom: 0;
+        }
+    }
+
+    .image {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .caption {
+        text-shadow: 0 2px 5px rgba(0,0,0,0.7), 0 5px 25px rgba(0,0,0,1);
+    }
+
+    .overlay-bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .overlay-text {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 3;
+
+        @media screen and (max-width: 768px) {
+            text-align: right;
+        }
+
+        .container {
+            @include contain-it;
+            padding: $base-spacing;
+            font-size: 1.5rem;
+			font-weight: $bold;
+
+            @media screen and (min-width: 900px) {
+				font-size: 2rem;
+			}
+        }
+    }
+
+    &.text-center {
+        .overlay-text {
+            text-align: center;
+        }
+    }
+
+    &.text-right {
+        .overlay-text {
+            text-align: right;
+        }
+    }
+}

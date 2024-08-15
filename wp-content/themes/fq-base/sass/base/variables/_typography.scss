@@ -1,0 +1,38 @@
+// Typography
+$base-font-family: futura-pt, sans-serif;
+$bold-font-family: futura-pt-bold, sans-serif;
+$thin: 300;
+$normal: 400;
+$demi: 600;
+$bold: 700;
+$xbold: 700;
+
+$fontsize: (
+	'default' : 1.25rem,
+	'small' : .9rem,
+	'medium' : 1.75rem,
+	'large' : 2.25rem,
+	'huge' : 3rem,
+);
+
+$fontleading: (
+	'default' : 1.4,
+	'small' : 1.4,
+	'medium' : 1.35,
+	'large' : 1.3,
+	'huge' : 1.2,
+	'allcaps' : 1.1,
+);
+
+$base-font-size: map-get($fontsize, 'default');
+$medium-font-size: map-get($fontsize, 'medium');
+$large-font-size: map-get($fontsize, 'large');
+$huge-font-size: map-get($fontsize, 'huge');
+$small-font-size: map-get($fontsize, 'small');
+
+$base-line-height: map-get($fontleading, 'default');
+$small-line-height: map-get($fontleading, 'small');
+$medium-line-height: map-get($fontleading, 'medium');
+$large-line-height: map-get($fontleading, 'large');
+$allcaps-line-height: map-get($fontleading, 'allcaps');
+$heading-line-height: map-get($fontleading, 'huge');

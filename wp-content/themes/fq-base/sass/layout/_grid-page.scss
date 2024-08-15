@@ -1,0 +1,121 @@
+
+.page-content {
+
+	.grid-wrapper {
+		@include contain-it( $medium-wide );
+		margin-top: $base-spacing;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		justify-content: center;
+		justify-items: center;
+		grid-gap: $small-spacing;
+		gap: $small-spacing;
+
+		@include media('>smalltablet') {
+			margin-top: $base-spacing*2;
+			grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+			grid-gap: $base-spacing;
+			gap: $base-spacing;
+		}
+		@include media('>tablet') {
+			margin-top: $base-spacing*3;
+			grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
+			grid-gap: $base-spacing;
+			gap: $base-spacing;
+		}
+
+		.grid-item {
+			position: relative;
+
+			.featured-image {
+				position: relative;
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					z-index: 1;
+					background: $overlay-color;
+				}
+
+				img {
+					display: block;
+					object-fit: cover;
+				}
+			}
+
+			header {
+				margin: 0;
+				padding: 0;
+				text-align: center;
+				position: absolute;
+				z-index: 2;
+				bottom: 15%;
+				left: 0;
+				right: 0;
+
+				.excerpt-entry-title {
+					margin: 0;
+					padding: 0 $base-side-padding;
+					color: $white;
+					text-align: center;
+				}
+			}
+
+
+			a {
+				display: block;
+				text-decoration: none;
+				border-radius: $base-photo-border-radius;
+				border: $base-image-border;
+				overflow: hidden;
+				transition: border $base-duration $base-timing;
+				&:hover {
+					border-width: 4px;
+					border-color: $action-color-hover
+				}
+			}
+		}
+
+		&.cpt-items {
+
+			grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+			margin-top: 0;
+			grid-gap: $small-spacing;
+			gap: $small-spacing;
+
+			@include media('>tablet') {
+				grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+			}
+
+			.grid-item {
+
+				header {
+					bottom: 15%;
+
+					.excerpt-entry-title {
+						font-size: 1.1rem;
+
+						// @include media('>smalltablet') {
+						//
+						// }
+					}
+				}
+
+
+				a {
+					border-radius: $base-photo-border-radius;
+					border: $base-image-border;
+					&:hover {
+						border-width: 4px;
+						border-color: $action-color-hover
+					}
+				}
+
+			}
+		}
+	}
+}

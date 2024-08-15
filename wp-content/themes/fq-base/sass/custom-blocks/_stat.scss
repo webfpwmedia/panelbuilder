@@ -1,0 +1,40 @@
+.wp-block-figoli-quinn-stat,
+.wp-block[data-type="figoli-quinn/stat"] {
+
+	margin: $base-spacing;
+
+    .align-left,
+    &.align-left {
+        p {
+            text-align: left;
+        }
+    }
+    .align-right,
+    &.align-right {
+        p {
+            text-align: right;
+        }
+    }
+    &.align-center,
+    .align-center {
+        p {
+            text-align: center;
+        }
+    }
+
+    .stat {
+		@include bold-heading();
+        font-size: 3.5rem;
+        margin-bottom: 0;
+
+		@include media(">tablet") {
+			font-size: 5rem;
+		}
+    }
+
+    .label {
+        font-weight: bold;
+        font-size: $base-font-size;
+    }
+
+}

@@ -1,0 +1,19 @@
+// This uses css flexbox by default .. add padding, etc, as desired.
+.wp-block-columns {
+
+    @include side-pad();
+    margin-bottom: 0;
+
+	.wp-block-column {	// individual columns; have margin right and left, except for first and last
+		&:not(:first-child) {
+			// margin-left: $base-spacing;
+		}
+	}
+}
+
+// If the column block is inside a group block, the latter already has side-padding, so let's remove it from the column container
+.wp-block-group {
+	.wp-block-columns {
+		@include side-pad(0);
+	}
+}

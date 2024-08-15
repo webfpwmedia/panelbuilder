@@ -1,0 +1,30 @@
+.hidden-ui-element {
+
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+
+	&.enabled {
+		display: block;
+	}
+}
+
+.ui-overlay {	// semi-transparent bg color if necessary?
+	// background: rgba( $gray3, .5 );
+}
+
+.ui-progress-indicator {
+
+	i {
+		font-size: 5em;
+		position: absolute;
+		color: $gray2;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+}

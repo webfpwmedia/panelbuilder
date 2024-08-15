@@ -1,0 +1,78 @@
+// Theme-related adjustments to block-related paragraph classes
+
+p.has-background {
+	padding: $small-spacing $base-spacing;
+	border-radius: $base-border-radius;
+}
+
+.has-small-font-size {
+	font-size: $small-font-size;
+	line-height: $small-line-height;
+	font-weight: $thin;
+}
+.has-normal-font-size {
+	font-size: $base-font-size*.9;
+	line-height: $base-line-height;
+
+	@include media(">smalltablet") {
+		font-size: $base-font-size*.95;
+	}
+	@include media(">bigtablet") {
+		font-size: $base-font-size;
+	}
+}
+.has-medium-font-size {
+	font-size: $medium-font-size*.9;
+	line-height: $medium-line-height;
+
+	@include media(">smalltablet") {
+		font-size: $medium-font-size*.95;
+	}
+	@include media(">bigtablet") {
+		font-size: $medium-font-size;
+	}
+}
+.has-large-font-size {
+	font-size: $large-font-size*.83;
+	line-height: $large-line-height;
+
+	@include media(">smalltablet") {
+		font-size: $large-font-size*.91;
+	}
+	@include media(">bigtablet") {
+		font-size: $large-font-size;
+	}
+}
+.has-huge-font-size {
+	font-size: $huge-font-size*.83;
+	line-height: $heading-line-height;
+
+	@include media(">smalltablet") {
+		font-size: $huge-font-size*.91;
+	}
+	@include media(">bigtablet") {
+		font-size: $huge-font-size;
+	}
+}
+
+.has-drop-cap {
+
+	&:not(:focus)::first-letter {
+		float: left;
+		font-size: 5em;
+		line-height: 1;
+		margin: .1em .08em 0 0;
+		font-style: normal;
+		font-weight: $normal;
+		text-transform: uppercase;
+		color: $gray3;
+	}
+
+	// clearfix; is this really necessary???
+	&:not(:focus)::after {
+		content: '';
+		display: table;
+		padding-top: 0;
+		clear: both;
+	}
+}

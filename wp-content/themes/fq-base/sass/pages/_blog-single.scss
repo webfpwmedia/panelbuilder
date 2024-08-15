@@ -1,0 +1,86 @@
+.single-post {
+	.featured-image {
+		@include contain-it();
+		width: 50%;
+		margin: 0 0 $base-spacing;
+
+		@include media(">tablet") {
+			@include contain-it();
+			margin-bottom: $base-spacing;
+			width: 100%;
+		}
+
+		@include media(">bigmonitor") {
+			@include contain-it( $standard-width-big-screen );
+			margin-bottom: $base-spacing;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			max-width: 350px;
+			border-radius: $base-photo-border-radius;
+			border: $base-image-border;
+		}
+	}
+
+	.meta-date {
+		font-weight: $bold;
+		font-size: $small-font-size;
+
+		@include contain-it();
+		margin-bottom: $small-spacing;
+
+		@include media(">bigmonitor") {
+			@include contain-it( $standard-width-big-screen );
+			margin-bottom: $small-spacing;
+		}
+	}
+
+	.meta {
+		@include contain-it($narrow);
+		text-align: center;
+
+		.meta-item {
+			margin-top: $base-spacing*2;
+		}
+
+		p {
+			font-weight: $bold;
+			margin-bottom: $small-spacing/2;
+		}
+	}
+
+	.meta-item.email-signup {
+		a {
+
+		}
+	}
+
+	.meta-item.categories {
+
+		.category-list {
+			margin-top: $small-spacing;
+		}
+
+		a {
+			@include small-hollow-button();
+		}
+	}
+
+	.share-links {
+		a {
+			@include small-hollow-button();
+			@include media('>tablet') {
+				padding-left: $base-spacing*3;
+				padding-right: $base-spacing*3;
+			}
+		}
+	}
+
+	.email-signup {
+		label {
+			margin-bottom: $small-spacing/2;
+		}
+	}
+}

@@ -1,0 +1,60 @@
+
+.open-close-button {
+	box-sizing: border-box;
+	background: transparent;
+	padding: 6px;
+	margin: 0;
+	display: block;
+	width: 36px;
+	height: 36px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	span.centerline,
+	&:before,
+	&:after {
+		width: 24px;
+		height: 4px;
+		background-color: $action-color;
+		transition: all $base-duration $base-timing;
+	}
+
+	&:before,
+	&:after {
+		content: '';
+	}
+
+	&.open {
+		span.centerline {
+			width: 0;
+			opacity: 0;
+		}
+
+		&:before {
+			margin-left: 40%;
+			width: 28px;
+			transform: rotate(45deg);
+			transform-origin: 8% top;
+		}
+
+		&:after {
+			margin-left: 40%;
+			width: 28px;
+			transform: rotate(-45deg);
+			transform-origin: 8% bottom;
+		}
+	}
+
+	&:hover {
+		background: transparent;
+
+		span.centerline,
+		&:before,
+		&:after {
+			background-color: $action-color-hover;
+		}
+	}
+}

@@ -1,0 +1,47 @@
+.card-set {
+
+    @include media('>tablet') {
+        display: flex;
+
+        .fq-card {
+            flex: 1;
+            margin-right: $base-spacing;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .fq-card {
+        text-align: center;
+
+        .image {
+            margin-bottom: $base-spacing;
+        }
+
+        .title {
+            font-family: $bold-font-family;
+            margin-bottom: $small-spacing / 3;
+        }
+
+        .wp-block-button__link {
+            min-width: 60%;
+        }
+    }
+}
+
+.card-set .block-editor-block-list__layout {
+    @include media('>tablet') {
+        display: flex;
+
+        .wp-block {
+            flex: 1;
+            margin-right: $base-spacing;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

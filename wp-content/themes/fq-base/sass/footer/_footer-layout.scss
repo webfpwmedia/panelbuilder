@@ -1,0 +1,124 @@
+
+footer {
+	background: $gray2;
+    padding: $base-vert-padding/2 0 0;
+    margin-top: -2rem;
+
+	.page-footer-content {
+		@include contain-it($xwide);
+		color: $beige;
+		padding-bottom: $base-vert-padding/2;
+		.footer-heading {
+
+			@include base-display-allcaps();
+			font-size: 1.1rem;
+			color: $black;
+			margin-bottom: $small-spacing/2;
+			text-align: left;
+			margin-bottom: $small-spacing;
+
+			@include media('>bigtablet') {
+				margin-bottom: $small-spacing;
+			}
+		}
+
+		a {
+			color: $beige;
+			text-decoration: none;
+			&:hover {
+				color: $gray5;
+				text-decoration: underline;
+			}
+		}
+
+		.upper-footer {
+
+			@include media('>smallmonitor') {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: flex-start;
+			}
+
+			.branding {
+				max-width: 85px;
+				margin: $base-spacing auto $base-spacing*1.5;
+
+				@include media('>smalltablet') {
+					max-width: 100px;
+					margin: $base-spacing auto;
+				}
+
+				@include media('>smallmonitor') {
+					max-width: none;
+					flex: 0 0 13%;
+					margin: $base-spacing 4% 0 0;
+				}
+
+				.stack-layer {
+					fill: $gray1;
+				}
+			}
+
+			.sitemap-nav {
+				flex: 1 0 auto;
+			}
+		}
+
+		.lower-footer {
+
+			border-top: 1px solid $gray1;
+			margin-top: $base-spacing;
+			padding: $base-spacing 6% 0;
+
+			@include media(">tablet") {
+				display: flex;
+				justify-content: space-between;
+				padding: $small-spacing 0 0;
+				margin-top: $small-spacing;
+			}
+
+			.social-links,
+			.contact-info {
+				flex: 0 0 33%;
+				margin-bottom: $small-spacing;
+				@include media(">tablet") {
+					margin-bottom: 0;
+				}
+			}
+
+			.contact-info-address {
+				text-align: center;
+				@include media(">tablet") {
+					text-align: left;
+				}
+			}
+
+			.contact-info-phone {
+				text-align: center;
+				margin-bottom: 0;
+
+				@include media(">tablet") {
+					text-align: right;
+				}
+			}
+
+			p {
+				font-size: 1.1rem;
+				margin: 0;
+			}
+		}
+	}
+
+	.fineprint {
+		background: $gray2;
+		padding: 0 4% $base-spacing;
+
+		.copyright-statement {
+			color: $black;
+			margin: 0;
+			font-size: $small-font-size;
+			text-align: center;
+		}
+	}
+}

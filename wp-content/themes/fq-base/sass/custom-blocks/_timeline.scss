@@ -1,0 +1,39 @@
+.timeline {
+	@include contain-it($standard-width,0);
+	@include media('>monitor') {
+		@include contain-it($standard-width);
+	}
+	@include media('>bigmonitor') {
+		@include contain-it($standard-width-big-screen,0);
+	}
+}
+
+.timeline-date {
+    display: flex;
+    align-items: center;
+	margin-bottom: $base-spacing;
+	@include media('>smalltablet') {
+		margin-bottom: $small-spacing;
+	}
+
+    .date {
+        flex: 1;
+        margin-right: $small-spacing;
+        font-weight: $demi;
+		font-size: 2rem;
+
+		@include media('>smalltablet') {
+			font-size: 3rem;
+		}
+    }
+
+    .description {
+        flex: 9;
+		font-size: $base-font-size*.85;
+		line-height: $base-line-height*.9;
+
+		@include media('>smalltablet') {
+			font-size: $base-font-size;
+		}
+    }
+}

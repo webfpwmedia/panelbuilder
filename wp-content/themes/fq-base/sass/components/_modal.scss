@@ -1,0 +1,61 @@
+.modal {
+    position: fixed;
+    z-index: 5000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bg {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: rgba(255,255,255,0.9);
+    }
+
+    #close {
+        background: $primary;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        font-size: 1rem;
+        position: absolute;
+        z-index: 60;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        i {
+            margin-right: 0.5rem;
+        }
+    }
+
+    .content {
+        max-height: 100%;
+        overflow-y: auto;
+        width: 100%;
+        position: fixed;
+        z-index: 20;
+        display: flex;
+        top:0;
+        padding-top: 5rem;
+        justify-content: center;
+        
+        .inner {
+            @include contain-it( $medium-wide );
+            max-height: 100%;
+            overflow-y: auto;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+    }
+}

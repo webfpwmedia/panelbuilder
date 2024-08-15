@@ -1,0 +1,36 @@
+.icon-links {
+
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	
+	li {
+		margin: 0 $small-spacing*2 0 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+
+			&:hover {
+			}
+		}
+	}
+
+	&.social-links {
+
+		li {
+
+			a {
+				font-size: 1.25em;
+				&:hover {
+					border: none;
+					color: $white;
+				}
+			}
+		}
+	}
+
+	&.social-sharing {
+	}
+}

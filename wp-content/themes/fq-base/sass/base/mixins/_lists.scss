@@ -1,0 +1,27 @@
+
+@mixin list-style() {
+	margin: .75rem 0;
+	padding: 0 $base-spacing 0 3em;
+
+	li {
+		list-style-position: outside;
+		font-size: $base-font-size;
+		line-height: $base-line-height*.9;
+		margin: 0 0 .5rem 0;
+		padding-left: 2px;
+	}
+}
+
+@mixin ul-style() {
+	@include list-style;
+	li {
+		list-style-type: disc;
+	}
+}
+
+@mixin ol-style() {
+	@include list-style;
+	li {
+		list-style-type: decimal;
+	}
+}

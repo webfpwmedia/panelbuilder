@@ -1,0 +1,55 @@
+.wp-block-button {
+	padding: $base-spacing 0;
+
+	&:not(.is-style-outline) {
+
+		.wp-block-button__link {
+			@include base-button();
+
+			@each $name, $color in $colors {
+
+				&.has-#{$name}-color {
+					color: $color;
+				}
+
+				&.has-#{$name}-background-color {
+					background-color: $color;
+				}
+
+				&.has-#{$name}-background-color:hover,
+				&.has-#{$name}-background-color:focus {
+					background-color: lighten( $color, $base-color-change );
+				}
+			}
+		}
+	}
+
+	&.is-style-outline {
+		.wp-block-button__link {
+
+			@include hollow-button();
+
+			@each $name, $color in $colors {
+
+				&.has-#{$name}-color {
+					color: $color;
+					border-color: $color;
+				}
+
+				&.has-#{$name}-background-color {
+					background-color: $color;
+				}
+
+				&.has-#{$name}-color:hover,
+				&.has-#{$name}-color:focus {
+					color: lighten( $color, $base-color-change );
+					border-color: lighten( $color, $base-color-change );
+				}
+				&.has-#{$name}-background-color:hover,
+				&.has-#{$name}-background-color:focus {
+					background-color: lighten( $color, $base-color-change );
+				}
+			}
+		}
+	}
+}

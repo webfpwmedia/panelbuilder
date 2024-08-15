@@ -1,0 +1,77 @@
+{
+    "key": "group_5ee26d1743ac3",
+    "title": "Banner message",
+    "fields": [
+        {
+            "key": "field_5ee26df8d3bf1",
+            "label": "Activate top-of-page banner",
+            "name": "banner_message_activated",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ee26d1748c8f",
+            "label": "Banner message",
+            "name": "banner_message",
+            "type": "text",
+            "instructions": "maximum 75 characters",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 75
+        },
+        {
+            "key": "field_5ee26d973b0b0",
+            "label": "Banner link",
+            "name": "banner_message_link",
+            "type": "link",
+            "instructions": "You can add a link if you want, but it is not required",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-top-banner"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1591897637
+}

@@ -1,0 +1,98 @@
+// Heights for fixed elements at top of page
+
+$_wp_admin_bar: 32px;
+$_wp_admin_bar_mobile: 46px;
+$_announcement_depth: 55px;
+$_announcement_depth_mobile: 55px;
+$_header_depth: 86px;
+$_header_depth_mobile: 86px;
+
+//Header positioning, depending on stuff that might be above it.
+
+body {
+
+	header.page-header {
+		top: 0;
+        position: fixed;
+        z-index: 4000;
+	}
+
+	&.admin-bar {
+
+		header.page-header {
+			top: $_wp_admin_bar_mobile;
+			@include media(">783px") { 	// This is the WP breakpoint at which the admin bar gets deeper
+				top: $_wp_admin_bar;
+			}
+		}
+	}
+
+	&.has-announcement {
+
+		.page-header-announcement {
+			top: 0;
+		}
+
+		header.page-header {
+			top: $_announcement_depth_mobile;
+			@include media(">tablet") {
+				top: $_announcement_depth;
+			}
+		}
+	}
+
+	&.has-announcement.admin-bar {
+
+		.page-header-announcement {
+			top: $_wp_admin_bar_mobile;
+			@include media(">783px") {
+				top: $_wp_admin_bar;
+			}
+		}
+
+		header.page-header {
+			top: $_announcement_depth_mobile + $_wp_admin_bar_mobile;
+			@include media(">tablet") {
+				top: $_announcement_depth + $_wp_admin_bar;
+			}
+		}
+	}
+}
+
+// Breadcrumbs positioning
+body {
+	.page-content .breadcrumbs {
+		position: fixed;
+		left: 0;
+		right: 0;
+		margin-top: 15px;
+        z-index: 999;
+        top: $_header_depth * 0.8;
+
+		@include media(">tablet") {
+			top: $_header_depth;
+			margin-top: 0;
+		}
+	}
+}
+
+// Content top, depending on what's fixed above, etc
+
+body {
+
+	.page-body {
+		padding-top: $_header_depth_mobile;
+		@include media(">tablet") {
+			padding-top: $_header_depth;
+		}
+	}
+
+	&.has-announcement {
+		.page-body {
+			padding-top: $_header_depth_mobile + $_announcement_depth_mobile;
+			@include media(">tablet") {
+				padding-top: $_header_depth + $_announcement_depth;
+			}
+		}
+	}
+}

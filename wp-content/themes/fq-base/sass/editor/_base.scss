@@ -1,0 +1,19 @@
+@import '../base/global';
+@import '../base/mixins/mixins';  // special mixins for oft-used design patterns specific to this project
+@import '../base/headings';
+@import '../base/typography';
+@import '../base/lists';
+@import '../base/images';
+@import '../base/tables';
+@import '../base/forms';
+// @import 'buttons';
+// @import 'spinners';
+
+
+@media (min-width: 600px) {
+    .block-editor-block-list__block .block-editor-url-input input[type=text], 
+    .block-editor-url-input input[type=text], 
+    .components-popover .block-editor-url-input input[type=text] {
+        width: 100%;
+    }
+}

@@ -1,0 +1,16 @@
+// Radii
+$base-border-radius: 2px;
+$base-button-border-radius: $base-border-radius;
+$base-photo-border-radius: $base-border-radius;
+$base-form-field-border-radius: $base-border-radius;
+
+// Border
+$base-border-width: 3px;
+$base-button-border-width: 2px;
+$base-border-style: solid;
+$base-border: $base-border-width $base-border-style $base-border-color;
+$base-image-border: none;
+$base-form-field-border: 1px solid $gray2;
+$base-subtle-border: 1px solid $gray4;
+$base-table-border: 1px solid $black;
+$quote-border: 10px solid $gray4;

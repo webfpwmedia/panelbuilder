@@ -1,0 +1,69 @@
+html {
+	color: $base-font-color;
+	font-family: $base-font-family;
+	font-size: 100%;
+	line-height: $base-line-height;
+}
+
+p {
+    margin-bottom: 1rem;
+	font-size: $base-font-size;
+}
+
+strong {
+	font-weight: $bold;
+}
+
+em {
+	font-style: italic;
+}
+
+small {
+	font-size: map-get($fontsize, 'small');
+}
+
+cite {
+	display: block;
+	font-weight: $bold;
+	font-size: map-get($fontsize, 'small');
+}
+
+blockquote {
+
+	padding: $small-spacing*.5 $base-spacing $small-spacing;
+	margin: $base-spacing*1.5 $base-spacing*2;
+	border-left: $quote-border;
+
+	p {
+		font-size: $base-font-size;
+		margin-bottom: $small-spacing;
+	}
+	cite {
+		@include base-display-allcaps();
+		text-align: left;
+		font-style: normal;
+		font-size: $base-font-size;
+		margin: $small-spacing 0 0;
+	}
+}
+
+a {
+    @include link;
+}
+
+hr {
+	border-bottom: $base-border;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	max-width: 60px;
+	margin: $base-spacing auto;
+}
+
+.has-large-font-size {
+    margin-top: 0;
+
+    @media (min-width: 901px) {
+        margin-top: 0;
+    }
+}

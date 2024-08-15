@@ -1,0 +1,68 @@
+
+.multi-column-hero {
+    background: $gray4;
+    padding: $small-spacing;
+}
+
+.multi-column-hero {
+
+    .media-element {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-size: cover;
+    }
+
+    .components-resizable-box__container,
+    .components-resizable-box__container div {
+        height: 100% !important;
+        background-size: cover;
+
+        .components-resizable-box__handle {
+            pointer-events: none;
+        }
+    }
+
+    .components-resizable-box__container.editor-media-container__resizer {
+        > div {
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            position: absolute;
+        }
+    }
+
+    @include media('>tablet') {
+        display: flex;
+
+        > div {
+            flex: 1;
+            margin-right: $small-spacing;
+            position: relative;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .image {
+            > div {
+                height: 100%;
+                background-size: cover;
+            }
+        }
+    }
+
+    .image,
+    .image > div {
+        @include media('<=tablet') {
+            height: 150px;
+        }
+    }
+
+    .text {
+        padding-top: $base-spacing;
+        padding-bottom: $base-spacing;
+        background: $gray5;
+    }
+}

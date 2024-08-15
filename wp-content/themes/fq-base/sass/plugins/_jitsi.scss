@@ -1,0 +1,27 @@
+
+.wp-block-jitsi-meet-wp-jitsi-meet.jitsi-wrapper {
+
+	width: 90vw !important;
+	max-width: 90vw !important;
+	margin-left: calc( 50% - 45vw ) !important;
+	margin-right: calc( 50% - 45vw ) !important;
+
+	> iframe {
+		height: 850px;
+		width: 100% !important;
+	}
+}
+
+.live-look-wrapper-connected {
+	display: flex;
+	padding: $base-spacing;
+	justify-content: center;
+
+	> div {
+		flex: 1;
+	}
+
+	.live-look-panels {
+		margin-left: $base-spacing;
+	}
+}

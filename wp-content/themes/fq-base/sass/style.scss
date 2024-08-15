@@ -1,0 +1,57 @@
+/*!
+Theme Name: FQ Base Theme
+Theme URI: http://www.figoliquinn.com
+Author: Bob Passaro
+Author URI: http://www.figoliquinn.com
+Description: Base theme for FQ custom website builds.
+Version: 9.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fq-custom-theme
+*/
+
+/*--------------------------------------------------------------
+# Reset with Normalize
+--------------------------------------------------------------*/
+@import '../lib/css/reset/normalize';	// normalization of browser styles
+
+/* ---------------------------------------------------------
+# Variable overrides to set our base styles.
+  NOTE: Important that this is included BEFORE library css such as
+  Include Media main sass files, so we can override those defaults
+--------------------------------------------------------- */
+@import 'base/variables/variables';
+
+/*--------------------------------------------------------------
+# Import libaries & frameworks
+--------------------------------------------------------------*/
+@import '../lib/css/media-queries/include-media';	// media query mixins
+
+/*--------------------------------------------------------------
+# Add webfont css if not using using
+ Google Fonts, Typekit or some such
+--------------------------------------------------------------*/
+// @import 'fonts/webfonts';	// This is for anything @font-face
+
+/*--------------------------------------------------------------
+# Import additional site-specific variables
+  to set up the basic styles and patterns for the overall site
+--------------------------------------------------------------*/
+@import 'base/base';
+
+/*--------------------------------------------------------------
+# Add parials that deal with basic WP block styles
+--------------------------------------------------------------*/
+@import 'wp-blocks/wp-blocks';
+@import 'custom-blocks/wp-custom-blocks';
+
+/*--------------------------------------------------------------
+# Import site-specific partials
+--------------------------------------------------------------*/
+@import 'layout/layout';
+@import 'header/header';
+@import 'components/components';
+@import 'charts/charts';
+@import 'footer/footer';
+@import 'pages/pages';
+@import "plugins/plugins";

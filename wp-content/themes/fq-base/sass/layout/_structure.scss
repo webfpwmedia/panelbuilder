@@ -1,0 +1,53 @@
+/*
+
+MEDIA QUERY EXAMPLES:
+
+@include media(">tablet") {
+	background: orange;
+}
+
+or using two breakpoints at once
+
+@include media(">phone", "<=tablet") {
+	background: purple;
+}
+
+or specific measure are ok, too
+
+@include media(">monitor", "<=1150px") {
+	font-size: 4.0rem;
+}
+
+Set default breakpoints in _base-config.scss
+see more documentation: https://include-media.com/
+
+*/
+
+main {
+
+    .entry {
+        &.has-top-padding {
+            padding-top: $base-spacing * 3;
+        }
+    }
+
+	.entry-header {
+		@include contain-it();
+
+		@include media(">bigmonitor") {
+			@include contain-it( $standard-width-big-screen );
+		}
+
+		&.archive-header {
+			@include contain-it( $medium-wide );
+			margin-bottom: $base-spacing*2;
+		}
+	}
+
+	.entry-body {
+		@include contain-it( $standard-width );
+		@include media(">bigmonitor") {
+			@include contain-it( $standard-width-big-screen );
+		}
+	}
+}

@@ -1,0 +1,154 @@
+
+header.page-header {
+
+	width: 100%;
+	background: $white;
+	padding-top: $small-spacing;
+	padding-bottom: $small-spacing;
+	border-bottom: 1px solid $gray5;
+
+	.page-header-content {
+
+		@include contain-it( $xwide ); // this handles side padding
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.branding {
+			flex: 0 1 236px;
+
+			.site-title {
+				display: block;
+				width: 100%;
+				line-height: 1;
+
+				@include media(">phone") {
+
+				}
+				@include media(">tablet") {
+
+				}
+
+				&:hover {
+
+				}
+
+				.site-logo { // svg
+					.a {	// type
+						fill: $black;
+					}
+					.b {	// mark
+						fill: $primary;
+					}
+				}
+
+				&:hover {
+					.site-logo {
+						.a {
+
+						}
+						.b {
+
+						}
+					}
+				}
+			}
+		}
+
+		.nav-rows {
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-end;
+			margin-left: $base-spacing;
+
+			.secondary {
+				display: none;
+
+				.login-out {
+
+					> div {
+						position: relative;
+					}
+
+					#user-menu-trigger {
+						i {
+							color: $primary;
+							cursor: pointer;
+						}
+					}
+
+					.user-submenu {
+						display: none;
+						position: absolute;
+						background-color: $gray5;
+						z-index: 4000;
+						top: 150%;
+						right: -20px;
+						padding: 0 $small-spacing;
+						width: 145px;
+						text-align: center;
+						border: $quote-border;
+
+						&::before {
+							font-family: "Font Awesome 5 Pro";
+							font-weight: 300;
+							font-size: 26px;
+							line-height: 10px;
+							position: absolute;
+							z-index: 4100;
+							content: '\f0d8';
+							right: 9px;
+							top: -16px;
+							font-weight: 600;
+							color: $gray4;
+
+							@include media(">bigtablet") {
+							}
+						}
+
+						li {
+							border-bottom: $base-form-field-border;
+							border-color: $gray4;
+							padding: $small-spacing*.75 0;
+
+							&:last-child {
+								border-bottom: none;
+							}
+
+							a {
+								margin-left: 0;
+
+								&:hover {
+									color: $primary;
+								}
+							}
+						}
+
+						&.open {
+							display: block;
+						}	
+					}
+
+				}
+
+				@include media(">bigtablet") {
+					display: flex;
+					justify-content: flex-end;
+					align-items: center;
+				}
+			}
+
+
+			.primary {
+				.mobile {
+					@include media('>bigtablet') {
+						display: none;
+					}
+				}
+			}
+		}
+
+	}
+}

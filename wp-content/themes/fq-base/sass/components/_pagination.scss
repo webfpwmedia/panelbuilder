@@ -1,0 +1,43 @@
+// Pagination nav
+
+.prev-next-nav {
+	margin-top: $base-spacing*2;
+	padding-top: $small-spacing;
+	padding-bottom: $small-spacing;
+	background: $gray5;
+
+	@include media(">tablet") {
+		padding-top: $base-spacing;
+		padding-bottom: $base-spacing;
+	}
+
+	.nav-links {
+		@include contain-it();
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+
+		@include media(">bigmonitor") {
+			@include contain-it( $standard-width-big-screen );
+		}
+
+		.prev-next {
+
+			a {
+				@include small-hollow-button();
+			}
+
+			&.nav-next {
+				span {
+					padding-left: $small-spacing;
+				}
+			}
+
+			&.nav-previous {
+				span {
+					padding-right: $small-spacing;
+				}
+			}
+		}
+	}
+}

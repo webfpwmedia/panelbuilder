@@ -1,0 +1,32 @@
+.wp-block-image {
+    margin-bottom: 0;
+
+	img {
+		border: $base-image-border;
+		border-radius: $base-photo-border-radius;
+	}
+
+	&.is-style-circle-mask {
+		img {
+			border: none;
+		}
+	}
+
+	&.is-style-rounded {
+		img {
+			border-radius: 9999px;
+		}
+	}
+
+	&.alignfull {
+		img {
+			border: none;
+		}
+	}
+
+	figcaption {
+        margin: $small-spacing 0 0;
+        font-style: normal;
+        text-align: center;
+	}
+}

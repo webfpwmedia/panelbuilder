@@ -1,0 +1,90 @@
+/* -------------------------------------------------------------------------------------------
+# Mixins or extends for buttons
+---------------------------------------------------------------------------------------------- */
+
+@mixin base-button( $background: $action-color, $font: $action-color-opposite ) {
+	appearance: none;
+	box-shadow: none;
+	box-sizing: border-box;
+	cursor: pointer;
+	border-radius: $base-button-border-radius;
+	display: inline-block;
+	font-family: $base-font-family;
+	font-size: 16px;
+	font-weight: $xbold;
+	line-height: 1;
+	padding: $small-spacing $base-spacing;
+	text-align: center;
+	text-decoration: none;
+	overflow-wrap: break-word;
+	transition: background-color $base-duration $base-timing;
+	background-color: $background;
+	color: $font;
+
+	&:focus {
+		outline: $focus-outline;
+		outline-offset: $focus-outline-offset;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: lighten($background, $base-color-change);
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.5;
+
+		&:hover {
+
+		}
+	}
+}
+
+@mixin neutral-button() {
+    @include base-button( $gray3, $gray1 );
+    border: none;
+}
+
+@mixin hollow-button( $font_color: $action-color ) {
+	@include base-button();
+	padding: calc(#{$small-spacing} - #{$base-button-border-width}) calc(#{$base-spacing} - #{$base-button-border-width});
+	@include hollow-button-color();
+}
+
+@mixin small-button( $background: $action-color, $font: $action-color-opposite ) {
+	@include base-button( $background, $font );
+	@include small-button-sizes();
+}
+
+@mixin small-hollow-button( $font_color: $action-color ) {
+	@include base-button();
+	@include hollow-button-color( $font_color );
+	@include small-button-sizes();
+}
+
+@mixin no-button-adjustments( $font_color: $action-color ) {
+	padding: 0;
+	cursor: pointer;
+	background: transparent;
+	color: $font_color;
+}
+
+@mixin hollow-button-color( $font: $action-color ) {
+	color: $font;
+	background-color: $viewport-background-color;
+	border: $base-button-border-width solid $font;
+
+	&:hover,
+	&:focus {
+		background-color: $viewport-background-color;
+		color: lighten($font, $base-color-change);
+		border-color: lighten($font, $base-color-change);
+	}
+}
+
+@mixin small-button-sizes() {
+	font-size: 14px;
+	font-weight: $bold;
+	padding: $small-spacing*.75 $small-spacing*1.5;
+}

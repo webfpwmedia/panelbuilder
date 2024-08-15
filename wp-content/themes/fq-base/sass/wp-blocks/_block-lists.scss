@@ -1,0 +1,9 @@
+.entry-body,
+.block-editor-block-list__block {
+	ul {
+		@include ul-style();
+	}
+	ol {
+		@include ol-style();
+	}
+}

@@ -1,0 +1,52 @@
+.nf-before-form-content {
+    padding: 0 10px;
+    margin-bottom: $base-spacing;
+}
+
+.nf-form-content {
+    .listcheckbox-wrap .nf-field-element label {
+        &:before {
+            opacity: 1;
+        }
+
+        &:after {
+            top: 4px !important;
+            left: 2px !important;
+        }
+    }
+}
+
+.wp-block-ninja-forms-form {
+
+	padding-bottom: 5em;
+
+    .checkbox-wrap .nf-field-element label:before,
+    .checkbox-wrap .nf-field-label label:before,
+    .listcheckbox-wrap .nf-field-element label:before,
+    .listcheckbox-wrap .nf-field-label label:before {
+        opacity: 1;
+    }
+
+    .listcheckbox-wrap {
+        .nf-field-element {
+            margin-top: $base-spacing;
+        }
+    }
+
+    .submit-container {
+        margin-top: $base-spacing;
+
+        .ninja-forms-field {
+            $submit-button-padding: $base-spacing * 3;
+            padding-left: $submit-button-padding;
+            padding-right: $submit-button-padding;
+
+			&[type="button"] {
+				background-color: $action-color;
+				&:hover {
+					background-color: $action-color-hover;
+				}
+			}
+        }
+    }
+}

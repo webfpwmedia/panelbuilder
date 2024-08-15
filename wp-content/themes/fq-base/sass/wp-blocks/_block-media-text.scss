@@ -1,0 +1,47 @@
+.wp-block-media-text {
+
+	.wp-block-media-text__media {
+
+        padding: $small-spacing $base-spacing;
+
+        @include media('>tablet') {
+            padding: 0;
+        }
+
+		img {
+			border-radius: $base-photo-border-radius;
+		}
+	}
+
+	.wp-block-media-text__content {
+
+		padding: $small-spacing $base-spacing;
+
+		@include media('>600px') {
+			padding: 0 8%;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&.is-stacked-on-mobile {
+
+		margin-top: $base-spacing;
+		margin-bottom: $base-spacing;
+
+		@include media('>600px') {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	&.alignfull {
+		img {
+			border: none;
+			border-radius: 0;
+		}
+	}
+
+}

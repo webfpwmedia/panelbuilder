@@ -1,0 +1,33 @@
+/* Blocks that support wide and full alignment, as well as stardard left, right, center:
+  ===============
+  Pullquote - Gallery - Image - Cover Image - Video - Table -
+  Columns - Text Columns - Categories (fullwidth only) - Embed
+*/
+
+.alignright {
+	float: right;
+	margin-left: $base-spacing;
+}
+
+.alignleft {
+	float: left;
+	margin-right: $base-spacing;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignfull,
+.alignwide {
+	@include align-full();
+}
+
+.alignwide {
+	// Smaller than this breakpoint, this behaves like .align-full()
+	@include media('>smallmonitor') {
+		@include align-wide();
+	}
+}

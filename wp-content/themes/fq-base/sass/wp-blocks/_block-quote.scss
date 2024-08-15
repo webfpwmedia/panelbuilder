@@ -1,0 +1,50 @@
+// The wp-block class is on a blockquote element, i.e., blockquote.wp-block-quote
+
+.wp-block-quote {
+    border-left: none;
+    position: relative;
+
+    &:before {
+        content: '';
+        background-image: url('./static/images/quote.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 30px;
+        height: 100px;
+        display: block;
+        position: absolute;
+        left: 0;
+    }
+
+    p {
+        padding-left: $small-spacing;
+        padding-top: $small-spacing;
+    }
+
+    cite {
+        padding-left: $small-spacing;
+    }
+
+    &.has-text-align-right {
+        text-align: right;
+    }
+
+    &.has-text-align-center {
+        text-align: center;
+        border-left: none;
+        padding: 0 10%;
+    }
+
+    &.is-style-large {
+        margin-top: $base-spacing*2;
+        margin-bottom: $base-spacing*2;
+
+        p {
+
+        }
+
+        cite {
+
+        }
+    }
+}

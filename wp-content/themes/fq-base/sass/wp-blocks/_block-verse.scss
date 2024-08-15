@@ -1,0 +1,6 @@
+.wp-block-verse {
+	font-family: $base-font-family;
+	font-size: map-get($fontsize, 'default');
+	line-height: map-get($fontleading, 'small');
+	font-style: italic;
+}

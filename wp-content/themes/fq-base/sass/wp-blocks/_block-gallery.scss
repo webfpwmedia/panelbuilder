@@ -1,0 +1,50 @@
+// pretty good styling by default; non-cropped not great, though
+
+.wp-block-gallery {
+
+    @include media('>tablet') {
+        display: flex;
+        justify-content: center;
+    }
+
+	.blocks-gallery-grid {	// this is the <ul>
+
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		.blocks-gallery-item {
+
+			figure {
+
+				a {
+
+				}
+
+				img {
+					border-radius: $base-photo-border-radius;
+				}
+			}
+		}
+	}
+
+	&.is-cropped {
+
+	}
+
+	&.columns-1 {
+
+	}
+
+	&.columns-2 {
+
+	}
+
+	&.columns-3 {
+
+	}
+
+	&.columns-4 {
+
+	}
+}

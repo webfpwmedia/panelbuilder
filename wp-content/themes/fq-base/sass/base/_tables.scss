@@ -1,0 +1,54 @@
+// Customizing site-wide table styles
+table {
+	border-collapse: collapse;
+	margin: $base-spacing 0;
+	table-layout: fixed;
+	text-align: left;
+	width: 100%;
+	background-color: $gray5;
+	padding: $base-spacing;
+}
+
+thead {
+	line-height: $heading-line-height;
+	vertical-align: bottom;
+}
+
+tbody {
+	vertical-align: top;
+}
+
+tr {
+	border-bottom: $base-table-border;
+	&:nth-child(odd) {
+		background-color: $gray5;
+	}
+	&:nth-child(even) {
+		background-color: $beige;
+	}
+}
+
+th,
+td {
+	padding: $small-spacing/2 $small-spacing;
+	font-weight: $normal;
+	&:nth-child(even) {
+		background-color: rgba($gray4,.8);
+	}
+}
+
+th {
+	font-weight: $demi;
+	font-size: $base-font-size*1.25;
+}
+
+thead {
+	tr:nth-child(odd) {
+		background-color: $black;
+		color: $white;
+		th:nth-child(even) {
+			background-color: $black;
+			color: $white;
+		}
+	}
+}

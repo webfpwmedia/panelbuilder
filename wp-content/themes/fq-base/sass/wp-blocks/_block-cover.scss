@@ -1,0 +1,43 @@
+.wp-block-cover {
+	border: $base-image-border;
+
+	.wp-block-cover__inner-container {
+
+	}
+
+	&.has-background-dim {
+
+	}
+
+	&.alignfull {
+		border: none;
+	}
+
+	&.alignwide {
+
+	}
+
+	&.alignleft {
+
+	}
+
+	&.aligncenter {
+
+	}
+
+	&.alignright {
+
+	}
+}
+
+.home {
+    .wp-block-cover {
+        @include media('>bigmonitor') {
+            min-height: 750px;
+        }
+
+        @include media('>1700px') {
+            min-height: 825px;
+        }
+    }
+}

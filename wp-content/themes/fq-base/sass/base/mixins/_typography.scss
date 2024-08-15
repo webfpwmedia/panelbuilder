@@ -1,0 +1,46 @@
+/* -------------------------------------------------------------------------------------------
+# Mixins or extends for typography
+---------------------------------------------------------------------------------------------- */
+
+@mixin base-display-type( $size: 1rem ) {
+	font-family: $base-font-family;
+	line-height: $heading-line-height;
+	text-align: center;
+	letter-spacing: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+	font-weight: $demi;
+	font-size: $size;
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+@mixin bold-heading() {
+	@include base-display-type;
+	font-family: $bold-font-family;
+	color: $primary;
+}
+
+@mixin base-display-allcaps() {
+	text-transform: uppercase;
+	font-weight: $demi;
+	color: $gray2;
+	line-height: $allcaps-line-height;
+}
+
+@mixin link() {
+    color: $action-color;
+	text-decoration: underline;
+	transition: all $base-duration $base-timing;
+
+	&:hover {
+		color: $action-color-hover;
+	}
+
+	&:focus {
+		outline: $focus-outline;
+		outline-offset: $focus-outline-offset;
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,30 @@
+/* -------------------------------------------------------------------------------------------
+# 'INCLUDE-MEDIA' variable overrrides
+# "Include Media" is a super awesome mixin library for making media queries in Sass
+# These are the default breakpoints. Change them as you like.
+---------------------------------------------------------------------------------------------- */
+
+$breakpoints: (
+	'smallphone': 320px,
+	'phone': 418px,
+	'bigphone': 478px,
+	'smalltablet': 550px,
+	'tablet': 768px,
+	'bigtablet': 900px,
+	'smallmonitor': 1024px,
+	'monitor': 1200px,
+	'bigmonitor': 1500px,
+);
+
+// Content widths
+$narrow: 600px;
+$standard-width: 950px;
+$standard-width-big-screen: 1150px;
+$medium-wide: 1200px;
+$wide: 1400px;
+$xwide: 1600px;
+$full: none;
+
+// Layout Spacing
+$base-side-padding: 5%;
+$base-vert-padding: 2rem;

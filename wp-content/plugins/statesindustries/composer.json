@@ -1,0 +1,8 @@
+{
+    "name": "figoli-quinn/states-industries",
+    "autoload": {
+        "psr-4": {
+            "FigoliQuinn\\StatesIndustries\\": "src"
+        }
+    }
+}

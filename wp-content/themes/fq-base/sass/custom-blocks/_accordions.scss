@@ -1,0 +1,93 @@
+
+// Styles to adjust default accordion styles from FQ custom block if in use.
+
+.wp-block-fq-custom-blocks-accordions-accordion-set {
+
+	.wp-block-fq-custom-blocks-accordions-accordion-item {
+
+		.accordion-body {
+			// display: none;
+		}
+
+		.accordion-trigger {
+
+			// NOTE: These are for the all-css default Chevron icon styles
+			// =========
+			// &:before, &:after {
+			// 	content: '';
+			// 	position: absolute;
+			// 	width: 2px;
+			// 	height: 10px;
+			// 	background-color: #aaa;
+			// 	top: 5px;
+			// 	left: 6px;
+			// 	transform: rotate(-45deg);
+			// }
+			// &:after {
+			// 	content: '';
+			// 	top: 11px;
+			// 	transform: rotate(45deg);
+			// }
+
+			// NOTE: Use this if you want all-css plus/minus sign icons instead of default Chevrons
+			// =========
+			// &:before, &:after {
+			// 	content: '';
+			// 	position: absolute;
+			// 	width: 2px;
+			// 	height: 14px;
+			// 	background-color: #aaa;
+			// 	top: 6px;
+			// 	left: 6px;
+			// }
+			// &:after {
+			// 	content: '';
+			// 	transform: rotate(90deg);
+			// }
+
+			// NOTE: Here is an example of styles if you want to use Font Awesome icons with an animated rotation
+			// =========
+			// content: '\f105';	// This is the Font Awesome unicode
+			// font-family: 'Font Awesome 5 Pro';
+			// background-color: transparent;
+			// width: auto;
+			// height: auto;
+			// line-height: 1rem;
+			// font-size: 20px;
+			// transition: transform .3s;
+		}
+
+		&.is-open {
+
+			.accordion-body {
+				// display: block;
+			}
+
+			.accordion-trigger {
+
+				// NOTE: These are for the all-css default Chevron icon styles
+				// &:before {
+				// 	transform: rotate(45deg);
+				// 	top: 8px;
+				// 	left: 10px;
+				// }
+				// &:after {
+				// 	transform: rotate(135deg);
+				// 	top: 8px;
+				// 	left: 4px;
+				// }
+
+				// NOTE: For all-css plus/minus sign icons instead of default Chevrons
+				// &:before {
+				// 	display: none;
+				// }
+
+				// NOTE: Example of styles if you want to use Font Awesome icons with an animated rotation
+				// &:before {
+				// 	transform: rotate(90deg);
+				// 	transform-origin: center center;
+				// }
+			}
+		}
+	}
+}

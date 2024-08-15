@@ -1,0 +1,5 @@
+.wp-block-file {
+    .rich-text {
+        @include link;
+    }
+}

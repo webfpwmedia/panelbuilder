@@ -1,0 +1,110 @@
+/* -------------------------------------------------------------------------------------------
+# Mixins or extends for form elements
+---------------------------------------------------------------------------------------------- */
+
+// Styling common to custom checkboxes and radio buttons
+@mixin checkit {
+	position: absolute;
+	left: -1000rem;
+
+	+ label {
+		position: relative;
+		cursor: pointer;
+		margin-right: 15px;
+		padding-left: 30px;
+		font-size: 16px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 2px;
+			height: 22px;
+			width: 22px;
+			border-radius: $base-form-field-border-radius;
+			border: $base-form-field-border;
+		}
+	}
+
+	&:disabled {
+		+ label {
+			cursor: not-allowed;
+			color: $gray3;
+
+			&::before {
+				border: none;
+				background-color: $gray3;
+			}
+		}
+	}
+}
+
+// Custom radio button
+
+@mixin custom-radio {
+
+	@include checkit();
+
+	+ label {
+
+		&::before {
+			border-radius: 50%;
+		}
+
+		&::after {
+			content: '';
+			transition: background-color $base-duration $base-timing;
+		}
+	}
+
+	&:checked + label::after {
+		content: '';
+		position: absolute;
+		left: 4px;
+		top: 6px;
+		height: 14px;
+		width: 14px;
+		border-radius: 50%;
+		background-color: $primary;
+		text-align: center;
+	}
+}
+
+// Custom checkbox
+
+@mixin custom-checkbox {
+
+	@include checkit();
+
+	+ label {
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 2px;
+			height: 22px;
+			width: 22px;
+			border-radius: $base-border-radius;
+		}
+
+		&::after {
+			content: '';
+			opacity: 0;
+			transition: opacity $base-duration $base-timing;
+		}
+	}
+
+	/* Not depending on the user's font here improves consistency. */
+	&:checked + label::after {
+		content: '\f00c';
+		font-family: 'Font Awesome 5 Pro';
+		font-size: 22px;
+		color: $primary;
+		position: absolute;
+		display: block;
+		opacity: 1;
+		left: 4px;
+		top: -7px;
+	}
+}

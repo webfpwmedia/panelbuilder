@@ -1,0 +1,22 @@
+.breadcrumbs {
+
+	@include contain-it( $wide );
+	padding-top: $small-spacing;
+	font-style: italic;
+	font-size: $small-font-size;
+	margin-bottom: $base-spacing*2;
+	@include media('>tablet') {
+		margin-bottom: $base-spacing*3;
+	}
+
+	a {
+	}
+
+	.separator {
+		padding: 0 $small-spacing;
+	}
+
+	span {
+		color: $beige;
+	}
+}

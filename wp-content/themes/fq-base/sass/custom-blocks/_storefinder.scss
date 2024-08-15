@@ -1,0 +1,149 @@
+#store-finder {
+    margin-bottom: $base-spacing * 2;
+
+    form {
+        margin-bottom: $base-spacing;
+        margin-top: $base-spacing;
+
+        @include media('>tablet') {
+            margin-bottom: 0;
+        }
+
+        .field-group {
+            display: flex;
+            flex-direction: column;
+
+            @include media('>tablet') {
+                flex-direction: row;
+            }
+        }
+
+        .checkbox-group {
+            margin-bottom: $base-spacing;
+        }
+
+        .field {
+            margin-right: $base-spacing;
+
+            @include media('>tablet') {
+                width: 40%;
+            }
+
+            input[type="text"] {
+                width: 100%;
+            }
+
+            &:last-child {
+                margin-right: 0;
+
+                @include media('>tablet') {
+                    width: 20%;
+                }
+
+                button {
+                    width: 100%;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .store {
+        .title {
+            text-align: left;
+            margin-bottom: 0;
+        }
+    }
+
+    .leaflet-popup-content {
+        .store {
+            .title {
+                margin-bottom: 0;
+                text-align: left;
+            }
+        }
+    }
+
+    .types {
+        width: 100%;
+        display: flex;
+        margin-top: $base-spacing;
+        margin-bottom: $base-spacing;
+
+        .type {
+            flex: 1;
+            margin-right: $base-spacing;
+            background: $gray4;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            header {
+                background: $gray2;
+                padding: $small-spacing $base-spacing;
+                text-align: center;
+                color: $gray5;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+
+            .description {
+                padding: $small-spacing $base-spacing;
+                text-align: center;
+            }
+        }
+    }
+
+    .products {
+        .disabled {
+            opacity: 0.3;
+        }
+    }
+    
+    .stores {
+        header {
+            margin-bottom: $small-spacing;
+
+            @include media('>tablet') {
+                margin-bottom: 0;
+            }
+        }
+
+        footer {
+            background: none;
+            display: flex;
+            justify-content: center;
+
+            div {
+                $radius: .25rem;
+
+                cursor: pointer;
+                border: 1px solid $gray3;
+                padding: $small-spacing;
+                border-right: none;
+
+                &:first-child {
+                    border-top-left-radius: $radius;
+                    border-bottom-left-radius: $radius;
+                }
+
+                &:last-child {
+                    border-right: 1px solid $gray3;
+                    border-top-right-radius: $radius;
+                    border-bottom-right-radius: $radius;
+                }
+
+                &.active {
+                    background: $gray5;
+                }
+            }
+        }
+    }
+}

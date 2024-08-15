@@ -1,0 +1,11 @@
+{
+    "name": "figoli-quinn/fq-panel-builder-backend",
+    "autoload": {
+        "psr-4": {
+            "FigoliQuinn\\FqPanelBuilderBackend\\": "inc/"
+        }
+    },
+    "require": {
+        "phpoffice/phpword": "^0.18.3"
+    }
+}

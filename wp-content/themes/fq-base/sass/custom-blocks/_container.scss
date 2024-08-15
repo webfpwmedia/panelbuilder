@@ -1,0 +1,73 @@
+.wp-block-figoli-quinn-container,
+.wp-block[data-type="figoli-quinn/container"] > div {
+    display: flex;
+
+    .inner {
+        width: 100%;
+    }
+
+    &.contain {
+        .inner {
+            .content {
+                @include contain-it($medium-wide, 0);
+            }
+        }
+    }
+
+    &.inner-center,
+    &.inner-left,
+    &.inner-right {
+        .inner {
+            display: flex;
+        }
+    }
+
+    &.inner-center {
+        .inner {
+            justify-content: center;
+        }
+    }
+    &.inner-left {
+        .inner {
+            justify-content: start;
+        }
+    }
+    &.inner-right {
+        .inner {
+            justify-content: end;
+        }
+    }
+
+    &.has-background {
+        background: $gray4;
+        padding: $small-spacing;
+
+        .inner {
+            background: $gray5;
+            padding: $base-spacing;
+        }
+    }
+
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+	&.flex-content {
+		.inner {
+			.content {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+		}
+	}
+}
+
+.block-editor-page {
+    .wp-block[data-type="figoli-quinn/container"] > div {
+        border: 1px dashed #e8e8e8;
+        padding: $small-spacing;
+    }
+}

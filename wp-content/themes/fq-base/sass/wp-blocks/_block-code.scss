@@ -1,0 +1,10 @@
+.wp-block-code {
+
+	@include side-pad();
+	@include vert-pad($base-spacing, $base-spacing);
+	background-color: $gray5;
+	border-radius: $base-border-radius;
+
+	code {
+	}
+}

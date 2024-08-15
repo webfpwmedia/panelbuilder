@@ -1,0 +1,18 @@
+.image-reference-group,
+.image-reference-group .block-editor-block-list__layout {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+    .wp-block-figoli-quinn-image-reference {
+		flex: 0 1 120px;
+		margin: $small-spacing;
+		min-width: 70px;
+        display: flex;
+    }
+
+    .caption {
+        font-size: $small-font-size;
+        text-align: center;
+    }
+}

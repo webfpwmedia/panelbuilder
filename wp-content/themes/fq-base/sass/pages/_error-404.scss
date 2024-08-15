@@ -1,0 +1,25 @@
+.error404 {
+	.page-body {
+		margin-bottom: $base-spacing;
+		.page-content {
+			padding-top: $base-spacing * 3;
+			margin-bottom: $base-spacing * 5;
+
+			.nothing-found {
+
+				.body-text {
+
+					.help-message {
+						text-align: center;
+						font-size: $medium-font-size;
+					}
+
+					.search-form {
+						max-width: 500px;
+						margin: $base-spacing*2 auto 0;
+					}
+				}
+			}
+		}
+	}
+}

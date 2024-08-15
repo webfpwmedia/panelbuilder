@@ -1,0 +1,91 @@
+.sitemap-nav {
+
+	@include media('>smalltablet') {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	@include media('>smallmonitor') {
+		justify-content: flex-end;
+	}
+
+	.sitemap-nav-section {
+		margin: $base-spacing 0 0 0;
+		padding: 0 6%;
+
+		@include media('>smalltablet') {
+			flex: 1 0 auto;
+			padding: 0;
+			margin: $base-spacing $base-spacing 0 0;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		@include media('>smallmonitor') {
+			flex: 0 0 18%;
+			margin: $base-spacing 2% 0 0;
+		}
+	}
+
+
+	.menu-wrapper {
+
+		.menu-items {
+
+			.menu-item:not(.subheading-only) {
+				line-height: 1.2em;
+				margin-bottom: $small-spacing;
+
+				@include media('>bigtablet') {
+					margin-bottom: $small-spacing/2;
+				}
+
+				a {
+					overflow: visible;
+					position: relative;
+
+					&:before {
+						content: '\f105';
+						position: absolute;
+						left: -10px;
+						top: 1px;
+						font-family: 'Font Awesome 5 Pro';
+						color: $gray5;
+						opacity: 0;
+						transition: opacity $base-duration $base-timing;
+					}
+
+					&:hover {
+						text-decoration: none;
+						&:before {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			.menu-item.subheading-only {
+				
+				margin-top: $small-spacing;
+				text-align: left;
+				margin-bottom: $small-spacing;
+
+				a {
+					@include base-display-allcaps();
+					font-size: 1.1rem;
+					color: $black;
+					cursor: default;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+	
+				@include media('>bigtablet') {
+					margin-bottom: $small-spacing;
+				}
+			}
+		}
+	}
+}

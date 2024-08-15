@@ -1,0 +1,126 @@
+// The wp-block class is on a figure element, i.e., figure.wp-block-quote, which contains a blockquote
+
+.wp-block-pullquote {
+
+	blockquote {
+
+		text-align: left;
+
+		p {
+			font-size: $medium-font-size*.9;
+			line-height: $medium-line-height;
+
+			@include media(">smalltablet") {
+				font-size: $medium-font-size;
+			}
+			@include media(">bigtablet") {
+				font-size: $large-font-size;
+				line-height: $large-line-height;
+			}
+		}
+
+		cite {
+
+		}
+	}
+
+	&:not(.is-style-solid-color) {
+
+		@include contain-it( $standard-width );
+		@include media(">bigmonitor") {
+			@include contain-it( $standard-width-big-screen );
+		}
+		padding-left: 0;
+		padding-right: 0;
+
+		blockquote {
+			margin: 0;
+
+			p {
+
+			}
+
+			cite {
+
+			}
+		}
+	}
+
+	&.is-style-solid-color {
+
+		blockquote {
+			padding: $small-spacing $base-spacing;
+			border-left: none;
+
+			p {
+				font-size: $medium-font-size*.9;
+				line-height: $medium-line-height;
+
+				@include media(">smalltablet") {
+					font-size: $medium-font-size;
+				}
+				@include media(">bigtablet") {
+					font-size: $large-font-size;
+					line-height: $large-line-height;
+				}
+			}
+
+			cite {
+
+			}
+		}
+	}
+
+	&.alignright {
+
+	}
+
+	&.alignleft {
+
+	}
+
+	&.alignleft,
+	&.alignright {
+
+		blockquote {
+
+			p {
+
+			}
+
+			cite {
+
+			}
+		}
+	}
+
+	&.alignfull.is-style-solid-color {
+
+		blockquote {
+
+			@include contain-it( $standard-width );
+			@include media(">bigmonitor") {
+				@include contain-it( $standard-width-big-screen );
+			}
+		}
+	}
+
+	&.alignwide.is-style-solid-color {
+
+		blockquote {
+
+			@include contain-it( $standard-width );
+			@include media(">bigmonitor") {
+				@include contain-it( $standard-width-big-screen );
+			}
+		}
+	}
+
+	&.alignleft.is-style-solid-color,
+	&.alignright.is-style-solid-color {
+
+		blockquote {
+
+		}
+	}
+}

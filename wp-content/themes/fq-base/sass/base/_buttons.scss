@@ -1,0 +1,21 @@
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'],
+a.button {
+	@include base-button();
+	border: none;
+
+	&.no-button {
+		@include no-button-adjustments();
+	}
+
+	&.neutral {
+		@include neutral-button();
+	}
+
+	&.hollow {
+		@include hollow-button();
+	}
+}

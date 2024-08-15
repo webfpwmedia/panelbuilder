@@ -1,0 +1,16 @@
+
+.wp-block-group {	// this is the container
+
+	&.has-background {
+
+		.wp-block-group__inner-container {
+			@include vert-pad();
+			@include side-pad();
+		}
+	}
+	&.alignfull {
+		.wp-block-group__inner-container {
+			@include side-pad();
+		}
+	}
+}

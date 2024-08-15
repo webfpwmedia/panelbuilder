@@ -1,0 +1,51 @@
+.search-form {
+
+	.form-fields {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+
+		.search-field {
+			width: 100%;
+			padding: $small-spacing $base-spacing*2.75 $small-spacing $base-spacing;
+			margin: 0 0 0 0;
+			transition: all $base-duration $base-timing;
+		}
+		.search-submit {
+			position: absolute;
+			//background-color: $form-field-background-color;
+			right: 2px;
+			padding: 4px 8px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+// this is for the expandable search form in the header
+.nav-rows {
+
+	.search-form {
+		margin-right: 10px;
+
+		.form-fields {
+			margin: 0;
+
+			.search-field {
+				height: 30px;
+				margin-right: 3px;
+				padding: 0 $base-spacing/2 0 $base-spacing;
+			}
+		}
+
+		&:not(.open) {
+
+			.search-field {
+				width: 0;
+				padding: $small-spacing*.5 0;
+				border: none;
+				margin-right: $base-spacing;
+			}
+		}
+	}
+}
